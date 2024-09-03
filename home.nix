@@ -69,7 +69,14 @@
     };
 
     alacritty.enable = true;
-    librewolf.enable = true;
+  librewolf = {
+    enable = true;
+    settings = {
+      "webgl.disabled" = false;
+      "privacy.resistFingerprinting" = false;
+      "privacy.clearOnShutdown.history" = false;
+      "privacy.clearOnShutdown.cookies" = false;
+    };
     termusic.enable = false;
 
     mangohud.enable = true;
