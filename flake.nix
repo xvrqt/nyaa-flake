@@ -13,15 +13,16 @@
     terminal.url = "github:xvrqt/terminal-flake";
     # Rust Programming Language Toolchain
     rust.url = "/home/amy/Development/rust-flake";
+    # 3rd Party Flakes
     # Blender 3D Rendering Program
-    #blender.url = "/home/amy/Development/blender-flake";
+    blender.url = "github:edolstra/nix-warez?dir=blender";
   };
 
   outputs = inputs @ {
     rust,
     niri,
     nixpkgs,
-    # blender,
+    blender,
     terminal,
     home-manager,
     ...
@@ -45,7 +46,9 @@
           # Rust Programming Language Toolchain
           rust.nixosModules.default
           # Blender Program
-          # blender.nixosModules.default
+          {
+            environment.systemPackages = [blender.packages.${system}.default];
+          }
           # Main NixOS Module - Pulls in its own sub-modules
           ./nyaa.nix
 

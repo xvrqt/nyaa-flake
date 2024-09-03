@@ -59,7 +59,7 @@
         pkgs.wgpu-utils
         pkgs.mesa
         pkgs.libglvnd
-        pkgs.nvtop
+        pkgs.nvtopPackages.full
         pkgs.nvitop
         pkgs.libGL
         pkgs.cudatoolkit

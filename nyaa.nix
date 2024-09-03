@@ -142,8 +142,10 @@
       pkgs.orca-slicer
       pkgs.wayland-scanner
       pkgs.alacritty
-      (pkgs.blender.override {cudaSupport = true;})
-      pkgs.cudatoolkit
+      # (pkgs.blender.override {
+      #   cudaSupport = true;
+      #   waylandSupport = true;
+      # })
       # pkgs.librewolf
 
       pkgs.turbovnc

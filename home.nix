@@ -18,7 +18,6 @@
       # pkgs.termusic
       pkgs.glxinfo
       pkgs.kitty
-      pkgs.blender
       #      pkgs.amberol
       pkgs.davinci-resolve-studio
       pkgs.alacritty
