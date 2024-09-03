@@ -7,47 +7,52 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # My Flakes
-    cli.url = "github:xvrqt/cli-flake";
-    #cli.url = "/home/amy/Development/cli-flake";
-    #niri.url = "github:xvrqt/niri-flake";
-    niri.url = "/home/amy/Development/niri-flake";
-    packages.url = "./pkgs";
-
-    # 3rd Party Flakes
-    nvf.url = "github:notashelf/nvf";
+    # Window Manager
+    niri.url = "github:xvrqt/niri-flake";
+    # TTY Emulator, CLI Programs, Fonts
+    terminal.url = "github:xvrqt/terminal-flake";
+    # Rust Programming Language Toolchain
+    rust.url = "/home/amy/Development/rust-flake";
+    # Blender 3D Rendering Program
+    #blender.url = "/home/amy/Development/blender-flake";
   };
 
   outputs = inputs @ {
-    cli,
-    nvf,
+    rust,
     niri,
     nixpkgs,
-    packages,
+    # blender,
+    terminal,
     home-manager,
     ...
   }: {
     nixosConfigurations = let
+      system = "x86_64-linux";
       machine = "nyaa";
+      overlays = [];
     in {
       nyaa = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         pkgs = import nixpkgs {
-          system = "x86_64-linux";
+          inherit system overlays;
           config.allowUnfree = true;
         };
         specialArgs = {
           inherit inputs;
         };
         modules = [
+          # Window manager
           niri.nixosModules.default
+          # Rust Programming Language Toolchain
+          rust.nixosModules.default
+          # Blender Program
+          # blender.nixosModules.default
           # Main NixOS Module - Pulls in its own sub-modules
           ./nyaa.nix
+
           # Home Manager as a NixOS Module
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              extraSpecialArgs = {inherit packages;};
               # Use pkgs configured at the system level
               useGlobalPkgs = true;
               # Install packages to /etc/profiles
@@ -55,19 +60,15 @@
               # List of Home Manager Modules
               users.amy = {...}: {
                 imports = [
-                  # Shell Customization & Useful Command Programs
-                  cli.homeManagerModules.default
-                  # Highly Customized NeoVim
-                  nvf.homeManagerModules.default
+                  # Window Manager (for some reason needs HM to customize)
                   niri.homeManagerModules.${machine}
-                  packages.features.blender.homeManagerModules.default
+                  # TTY Emulator, CLI Programs, Fonts
+                  terminal.homeManagerModules.${system}.default
                   # Main Home Manager Module
                   ./home.nix
                 ];
               };
             };
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
           }
         ];
       };

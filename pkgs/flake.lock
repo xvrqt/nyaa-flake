@@ -1,0 +1,127 @@
+{
+  "nodes": {
+    "alacritty": {
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-nQOwvs/Q/CODL9RJXwKo1vP3Ps6LjpY0keH+QxO19+M=",
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/alacritty",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/alacritty",
+        "type": "path"
+      }
+    },
+    "blender": {
+      "inputs": {
+        "blender": "blender_2"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-nPKLXv/iKwD2JNzochtnid8fmVpMWI53NlDLr5/Vs7Y=",
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/blender",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/blender",
+        "type": "path"
+      }
+    },
+    "blender_2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "dir": "blender",
+        "lastModified": 1724347557,
+        "narHash": "sha256-IknKnhu7eYq7GS+jY9AUkvTQw6l0wj3wVAhB9vcMCeM=",
+        "owner": "edolstra",
+        "repo": "nix-warez",
+        "rev": "9062c70ff62d9718485733f5cd5b25cd87875772",
+        "type": "github"
+      },
+      "original": {
+        "dir": "blender",
+        "owner": "edolstra",
+        "repo": "nix-warez",
+        "type": "github"
+      }
+    },
+    "features": {
+      "inputs": {
+        "alacritty": "alacritty",
+        "blender": "blender",
+        "fonts": "fonts",
+        "llm": "llm"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-Npfo+V4zOGpqmte2/yfXIntIESSSwz1dZBYAKPDHxM8=",
+        "path": "/nix/store/yhqmfgjpk0wn397viqzwbrjqg3887apw-source/pkgs/features",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/yhqmfgjpk0wn397viqzwbrjqg3887apw-source/pkgs/features",
+        "type": "path"
+      }
+    },
+    "fonts": {
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-gpffv+CNWjSdVnYr8ysKPxbbYZAkQC+g3WYVQ95MFzE=",
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/fonts",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/fonts",
+        "type": "path"
+      }
+    },
+    "llm": {
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-BAdepiQH4y5i7d7g8sZCc+KXm2ssrIVoe0oIjYOmvYs=",
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/llm",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/mq3nxr9yv6zs62fw48naxayw213r0371-source/llm",
+        "type": "path"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1722221733,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "12bf09802d77264e441f48e25459c10c93eada2e",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-24.05",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "features": "features",
+        "scripts": "scripts"
+      }
+    },
+    "scripts": {
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-lFuxf0CbXW5isTNGRShenaLL1bmwsUrd2FJTpZClNMg=",
+        "path": "/nix/store/yhqmfgjpk0wn397viqzwbrjqg3887apw-source/pkgs/scripts",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/yhqmfgjpk0wn397viqzwbrjqg3887apw-source/pkgs/scripts",
+        "type": "path"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

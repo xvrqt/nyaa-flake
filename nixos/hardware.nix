@@ -51,6 +51,18 @@
         pkgs.vaapiVdpau
         pkgs.libvdpau-va-gl
         pkgs.mesa.drivers
+        pkgs.libva-utils
+        pkgs.vdpauinfo
+        pkgs.vulkan-tools
+        pkgs.vulkan-validation-layers
+        pkgs.egl-wayland
+        pkgs.wgpu-utils
+        pkgs.mesa
+        pkgs.libglvnd
+        pkgs.nvtop
+        pkgs.nvitop
+        pkgs.libGL
+        pkgs.cudatoolkit
       ];
     };
 

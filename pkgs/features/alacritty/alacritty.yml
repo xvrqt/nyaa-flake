@@ -1,7 +1,0 @@
-shell:
-  # program: /etc/profiles/per-user/amy/bin/nu
-  # args:
-  #   - --login
-
-import:
-  - ~/.config/alacritty/theme.yml

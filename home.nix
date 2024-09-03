@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     # Customize my NeoVim (nvf flake)
-    ./home/nvf.nix
   ];
   # God's own perfect angel
   home = {
@@ -16,10 +15,13 @@
     packages = [
       # Audio something something pkgs.wireplumber
       #
-      pkgs.termusic
+      # pkgs.termusic
       pkgs.glxinfo
+      pkgs.kitty
+      pkgs.blender
       #      pkgs.amberol
       pkgs.davinci-resolve-studio
+      pkgs.alacritty
       pkgs.imagemagick
       pkgs.discord
       pkgs.esshader
@@ -29,6 +31,7 @@
       # pkgs.cargo
       # pkgs.cargo-binutils pkgs.llvmPackages.bintools
       pkgs.pkg-config
+      # pkgs.librewolf
       # pkgs.wineasio
       # pkgs.winetricks
       #pkgs.wineWowPackages.stable
@@ -65,6 +68,10 @@
     home-manager = {
       enable = true;
     };
+
+    alacritty.enable = true;
+    librewolf.enable = true;
+    termusic.enable = false;
 
     mangohud.enable = true;
 

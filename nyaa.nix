@@ -1,9 +1,5 @@
 # My primary desktop
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./nixos/hardware-configuration.nix
@@ -15,9 +11,12 @@
     ./nixos/boot.nix
     # Remotely mount some filesystems
     ./nixos/smb.nix
-    # neovim
-    #inputs.nvf.nixosModules.default
   ];
+
+  rust = {
+    enable = true;
+    flavor = "stable";
+  };
 
   nix = {
     package = pkgs.nixFlakes;
@@ -141,6 +140,11 @@
       pkgs.neovim
       pkgs.freecad
       pkgs.orca-slicer
+      pkgs.wayland-scanner
+      pkgs.alacritty
+      (pkgs.blender.override {cudaSupport = true;})
+      pkgs.cudatoolkit
+      # pkgs.librewolf
 
       pkgs.turbovnc
       pkgs.pavucontrol
