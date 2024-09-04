@@ -7,12 +7,13 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Rust Programming Language Toolchain
+    rust.url = "github:xvrqt/rust-flake";
     # Window Manager
     niri.url = "github:xvrqt/niri-flake";
     # TTY Emulator, CLI Programs, Fonts
     terminal.url = "github:xvrqt/terminal-flake";
-    # Rust Programming Language Toolchain
-    rust.url = "/home/amy/Development/rust-flake";
+
     # 3rd Party Flakes
     # Blender 3D Rendering Program
     blender.url = "github:edolstra/nix-warez?dir=blender";

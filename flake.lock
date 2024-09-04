@@ -819,11 +819,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1725388949,
-        "narHash": "sha256-kIQdK9hwe5FZX3sqcLcvtBQR8cMOPprSv1udk/KBqKM=",
+        "lastModified": 1725484884,
+        "narHash": "sha256-k2yRbWjHWA3uzBIE/4XcOrGdTPvxtvhtTAPHmCJh3sc=",
         "owner": "xvrqt",
         "repo": "neovim-flake",
-        "rev": "c6647de8c35bbd1e85a6884d2a89477272730550",
+        "rev": "03e90f031fcb32eec44ceac532c39498ad695886",
         "type": "github"
       },
       "original": {
@@ -3188,15 +3188,15 @@
       "locked": {
         "lastModified": 1725401143,
         "narHash": "sha256-IdGXLgUoSmQ7X7iCrDIg8Tt9JVsNH3+T9uHrL5u4KEY=",
-        "ref": "refs/heads/master",
+        "owner": "xvrqt",
+        "repo": "rust-flake",
         "rev": "f86f15a5847da8ddeace490ca35e31bf3e6a0efd",
-        "revCount": 3,
-        "type": "git",
-        "url": "file:///home/amy/Development/rust-flake"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/amy/Development/rust-flake"
+        "owner": "xvrqt",
+        "repo": "rust-flake",
+        "type": "github"
       }
     },
     "rust-overlay": {
@@ -3441,11 +3441,11 @@
         "nixpkgs": "nixpkgs_17"
       },
       "locked": {
-        "lastModified": 1725389220,
-        "narHash": "sha256-u9uVtDFHug4xIb8cNwmxKae+avRc/RfMNpU2NSZx2cI=",
+        "lastModified": 1725484975,
+        "narHash": "sha256-nxFbyjEybhEnBTcWqL74SbHCfN2LaJzvFB+g3rjUb/I=",
         "owner": "xvrqt",
         "repo": "terminal-flake",
-        "rev": "9201da70f1b4e2b043195a7a91b5a1f2d0283832",
+        "rev": "6f08ab173aecdffd63ce8d439467bd5918773b98",
         "type": "github"
       },
       "original": {
