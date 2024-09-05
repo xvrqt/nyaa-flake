@@ -137,24 +137,15 @@
     # These packages are automatically available to all users
     systemPackages = [
       # Default text editor
-      pkgs.neovim
+      pkgs.wofi
       pkgs.freecad
       pkgs.orca-slicer
       pkgs.wayland-scanner
-      pkgs.alacritty
-      # (pkgs.blender.override {
-      #   cudaSupport = true;
-      #   waylandSupport = true;
-      # })
-      # pkgs.librewolf
 
       pkgs.turbovnc
       pkgs.pavucontrol
       pkgs.liquidctl
       pkgs.i2c-tools
-      #inputs.neovim-flake.packages.x86_64-linux.default
-      # Pretty print system information upon shell login
-      #pkgs.neofetch
       #inputs.invokeai.packages.${pkgs.system}.invokeai-nvidia
       pkgs.waypipe
       pkgs.xorg.xauth

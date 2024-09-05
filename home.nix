@@ -26,11 +26,7 @@
       pkgs.esshader
       pkgs.gimp-with-plugins
       pkgs.xfce.thunar
-      # pkgs.rustc
-      # pkgs.cargo
-      # pkgs.cargo-binutils pkgs.llvmPackages.bintools
       pkgs.pkg-config
-      # pkgs.librewolf
       # pkgs.wineasio
       # pkgs.winetricks
       #pkgs.wineWowPackages.stable
@@ -68,7 +64,6 @@
       enable = true;
     };
 
-    alacritty.enable = true;
     librewolf = {
       enable = true;
       settings = {
@@ -110,13 +105,6 @@
     zsh = {
       enable = true;
     };
-
-    nushell = {
-      enable = false;
-      # crowConfig = true;
-      extraConfig = ''def window_dimensions [] {hyprctl activewindow -j | jq -r '(.at[0]|tostring) + "," + (.at[1]|tostring) + " " + (.size[0]|tostring) + "x" + (.size[1]|tostring)'}'';
-    };
-
     zoxide.enable = false;
   };
 }
