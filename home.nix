@@ -93,12 +93,12 @@
         wlrobs
         # obs-backgroundremoval
         obs-pipewire-audio-capture
-        waveform
+        # waveform
         obs-vaapi
-        obs-3d-effect
+        # obs-3d-effect
         obs-vkcapture
         input-overlay
-        advanced-scene-switcher
+        # advanced-scene-switcher
       ];
     };
 

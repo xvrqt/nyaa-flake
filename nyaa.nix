@@ -13,16 +13,18 @@
     ./nixos/smb.nix
   ];
 
-  rust = {
-    enable = true;
-    flavor = "stable";
-  };
-
+  # Enable Flakes
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+  };
+
+  # Enable the Rust Programming Language Toolchain
+  rust = {
+    enable = true;
+    flavor = "stable";
   };
 
   qt.enable = true;
@@ -33,7 +35,7 @@
     portal = {
       enable = true;
       config.common.default = "*";
-      extraPortals = [pkgs.xdg-desktop-portal-gtk];
+      extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr pkgs.xdg-desktop-portal-gnome];
     };
   };
 
@@ -116,9 +118,8 @@
       gamescopeSession.enable = true;
     };
 
-    gamescope.enable = true;
-
     gamemode.enable = true;
+    gamescope.enable = true;
 
     # Git for maintaining Flakes
     git = {
@@ -136,11 +137,12 @@
     };
     # These packages are automatically available to all users
     systemPackages = [
-      # Default text editor
+      pkgs.blackmagic-desktop-video
       pkgs.wofi
-      pkgs.freecad
-      pkgs.orca-slicer
+      pkgs.waypipe
       pkgs.wayland-scanner
+      pkgs.xwayland-satellite
+      pkgs.xwayland-run
 
       pkgs.turbovnc
       pkgs.pavucontrol
@@ -153,8 +155,6 @@
       pkgs.glfw-wayland
       pkgs.qt6.full
       # pkgs.SDL2
-      #pkgs.glfw
-      # pkgs.wayland.dev
     ];
 
     # Permissible login shells (sh is implicitly included)
