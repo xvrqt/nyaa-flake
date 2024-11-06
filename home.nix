@@ -18,6 +18,7 @@
       # pkgs.termusic
       pkgs.glxinfo
       pkgs.kitty
+      pkgs.git-lfs
       #      pkgs.amberol
       pkgs.davinci-resolve-studio
       pkgs.alacritty
@@ -62,6 +63,11 @@
     # Allow home-manager to manage itself
     home-manager = {
       enable = true;
+    };
+
+    git = {
+      enable = true;
+      lfs.enable = true;
     };
 
     librewolf = {

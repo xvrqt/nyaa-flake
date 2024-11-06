@@ -61,6 +61,8 @@
               useGlobalPkgs = true;
               # Install packages to /etc/profiles
               useUserPackages = true;
+              # If the file already exists, append this extension to it
+              backupFileExtension = "hmb";
               # List of Home Manager Modules
               users.amy = {...}: {
                 imports = [
